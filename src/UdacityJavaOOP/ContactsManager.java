@@ -1,8 +1,8 @@
 package UdacityJavaOOP;
 
 public class ContactsManager {
-    Contact[] myFriends;
-    int friendsCount;
+    private Contact[] myFriends;
+    private int friendsCount;
 
     public ContactsManager() {
         this.friendsCount = 0;
@@ -14,17 +14,17 @@ public class ContactsManager {
         this.friendsCount = friendsCount;
     }
 
-    void addContact(Contact contact){
+    public void addContact(Contact contact){
         myFriends[friendsCount] = contact;
         friendsCount++;
     }
 
-    Contact searchContact(String searchName){
+    public Contact searchContact(String searchName){
         for(int i=0; i<friendsCount; i++){
-            if(myFriends[i].name.equals(searchName)){
+            if(myFriends[i].getName().equals(searchName)){
                 return myFriends[i];
             }else{
-                System.out.println("Contact " + searchName + " not found!");;
+                System.out.println("Contact " + searchName + " not found!");
             }
         }
         return null;
