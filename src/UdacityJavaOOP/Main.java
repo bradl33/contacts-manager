@@ -11,9 +11,10 @@ public class Main {
 
         myContactManager.addContact(brad);
 
-        String contactNameToSearch = "Bradley";
-
-        Contact searchedContact = myContactManager.searchContact(contactNameToSearch);
+        //Convert search name to Title Case to match what is stored
+        String rawSearchName = "brADleY";
+        String searchNameInTitleCase = StringToTitleCase.convertToTitleCaseIteratingChars(rawSearchName);
+        Contact searchedContact = myContactManager.searchContact(searchNameInTitleCase);
 
         if(searchedContact != null){
             System.out.println(searchedContact.phoneNumber);
