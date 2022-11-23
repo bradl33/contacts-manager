@@ -5,9 +5,9 @@ public class Main {
         ContactsManager myContactManager = new ContactsManager();
         Contact brad = new Contact();
 
-        brad.name = "Bradley";
-        brad.email = "bradley@example.com";
-        brad.phoneNumber = "0123456789";
+        brad.setName("Bradley");
+        brad.setEmail("bradley@example.com");
+        brad.setPhoneNumber("0123456789");
 
         myContactManager.addContact(brad);
 
@@ -17,7 +17,7 @@ public class Main {
         Contact searchedContact = myContactManager.searchContact(searchNameInTitleCase);
 
         if(searchedContact != null){
-            System.out.println(searchedContact.phoneNumber);
+            System.out.println(searchedContact.getPhoneNumber());
         }
     }
 }
